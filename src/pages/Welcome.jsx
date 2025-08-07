@@ -14,7 +14,7 @@ const Welcome = () => {
         "/images/image3.jpg",
         "/images/image8.jpg",
         "/images/image12.jpg",
-        "/images/image13.jpg",
+        "/images/image16.jpg",
         "/images/image15.jpg",
     ];
 
@@ -53,7 +53,7 @@ const Welcome = () => {
                 {/* Gradasi dari bawah */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
 
-                <div className='z-10 text-gray-200 h-screen justify-between flex flex-col py-15 relative '>
+                <div className='z-10 text-gray-200 h-screen justify-between flex flex-col pt-15 pb-20 relative '>
                     <div className='text-center'>
                         <p className='crimson-text-regular'>THE WEDDING OF</p>
                         <p className='corinthia-regular text-5xl'>Amel & Roni</p>
@@ -81,8 +81,8 @@ const Welcome = () => {
 
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent h-180"></div>
 
-                    <div className='z-10 text-gray-200 h-180 pt-2 relative'>
-                        <div className='bg-amber-50/50 rounded-lg text-sm px-2 py-1 left-1/2 -translate-x-1/2 w-[96%] text-yellow-800 fixed'>
+                    <div className=' text-gray-200 h-180 pt-2 relative'>
+                        <div className='bg-amber-100/90 rounded-lg z-10 text-sm px-2 py-1 left-1/2 -translate-x-1/2 w-[96%] text-yellow-800 fixed'>
                             <p className='crimson-text-bold'>Ryan</p>
                             <p className='crimson-text-regular'>Samawa ya ssskhhdads</p>
                         </div>
@@ -91,28 +91,47 @@ const Welcome = () => {
                         </div>
                     </div>
                 </div>
-                <div className='bg-amber-50 h-150 relative bottom-0 w-full'>
-                    <img className='h-20 absolute left-1 top-1' src="/images/left-top.png" alt="" />
-                    <img className='h-20 absolute right-1 top-1' src="/images/right-top.png" alt="" />
-                    <img className='h-20 absolute bottom-1 left-1' src="/images/left-bottom.png" alt="" />
-                    <img className='h-20 absolute right-1 bottom-1' src="/images/right-bottom.png" alt="" />
+                <div className='bg-amber-50 h-270 relative bottom-0 py-2 w-full'>
+                    <div className='border-2 h-full rounded-full border-amber-600 mx-4'>
+                        <img className='h-20 absolute left-2 top-2' src="/images/left-top.png" alt="" />
+                        <img className='h-20 absolute right-2 top-2' src="/images/right-top.png" alt="" />
+                        <img className='h-20 absolute bottom-2 left-2' src="/images/left-bottom.png" alt="" />
+                        <img className='h-20 absolute right-2 bottom-2' src="/images/right-bottom.png" alt="" />
 
-                    <p className='crimson-text-regular text-amber-950 text-center mx-5 text-sm pt-15'>
-                        Assalamu'alaikum Warahmatullahi Wabarakatuh <br />
-                        Dengan penuh rasa syukur kepada Allah SWT, kami dengan <br /> rendah hati mengundang Bapak/Ibu/Saudara/i untuk hadir dalam pernikahan kami
-                    </p>
+                        <p className='crimson-text-regular text-amber-950 text-center mx-5 text-sm pt-10'>
+                            Assalamu'alaikum <br /> Warahmatullahi Wabarakatuh <br />
+                            Dengan penuh rasa syukur kepada Allah SWT, <br /> kami dengan rendah hati mengundang <br /> Bapak/Ibu/Saudara/i untuk hadir dalam pernikahan kami
+                        </p>
 
-                    <div className='text-center'>
-                        <div className='w-50 h-50 inset-0 overflow-hidden rounded-full shadow-black/50 shadow-2xl mx-auto mt-10'>
-                            <img className='' src="/images/image13.jpg" alt="" />
+                        <div className='text-center'>
+                            <div className='w-50 h-50 inset-0 overflow-hidden rounded-full shadow-black/50 shadow-2xl mx-auto mt-10'>
+                                <img className='' src="/images/image13.jpg" alt="" />
+                            </div>
+                            <p className='corinthia-regular text-4xl text-yellow-800 mt-3 mb-1'>Roni Saputra</p>
+                            <div className='border-b-2 border-dashed w-40 mx-auto mb-2'></div>
+                            <p className='crimson-text-regular text-sm'>Putra dari Pasangan</p>
+                            <p className='crimson-text-regular text-sm'>Bapak Sumhadi & Ibu Minarsih</p>
+                            <p className='crimson-text-regular text-sm'>Beralamat di Perumahan Taman Putri <br /> Desa Wanaherang, Kec. Gunung putri, Kab. Bogor</p>
                         </div>
-                        <p className='corinthia-regular text-4xl text-yellow-800 mt-3 mb-1'>Roni Saputra</p>
-                        <div className='border-b-2 border-dashed w-40 mx-auto mb-2'></div>
-                        <p className='crimson-text-regular text-sm'>Putra dari Pasangan</p>
-                        <p className='crimson-text-regular text-sm'>Bapak Sumhadi & Ibu Minarsih</p>
-                        <p className='crimson-text-regular text-sm'>Beralamat di Perumahan Taman Putri <br /> Desa Wanaherang, Kec. Gunung putri, Kab. Bogor</p>
+
+                        <div className='text-center mt-10'>
+                            <div className='w-50 h-50 inset-0 overflow-hidden rounded-full shadow-black/50 shadow-2xl mx-auto mt-10'>
+                                <img className='' src="/images/image13.jpg" alt="" />
+                            </div>
+                            <p className='corinthia-regular text-4xl text-yellow-800 mt-3 mb-1'>Tansya Syaqila Amelia</p>
+                            <div className='border-b-2 border-dashed w-40 mx-auto mb-2'></div>
+                            <p className='crimson-text-regular text-sm'>Putri dari Pasangan</p>
+                            <p className='crimson-text-regular text-sm'>Bapak Diding & Ibu Yani</p>
+                            <p className='crimson-text-regular text-sm'>Beralamat di Perumahan Pepabri <br /> Desa Wanaherang, Kec. Gunung putri, Kab. Bogor</p>
+                        </div>
                     </div>
                 </div>
+                <div className="w-full relative bottom-0 h-200 bg-cover bg-center bg-[url('/images/image15.jpg')]">
+                    <div className="absolute inset-0 bg-black/50"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-amber-50 via-transparent to-transparent"></div>
+
+                </div>
+
             </div> : ""}
 
         </div>
