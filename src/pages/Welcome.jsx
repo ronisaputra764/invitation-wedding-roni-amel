@@ -72,10 +72,18 @@ const Welcome = () => {
 
             {open ? <div className="relative overflow-hidden max-w-[480px] mx-auto">
                 <div className='relative overflow-hidden h-180'>
-                    <div
+                    {/* <div
                         className={`absolute inset-0 bg-cover h-180 bg-center transition-all duration-2000 ${fade ? 'opacity-100 zooming-background' : 'opacity-100'}`}
                         style={{ backgroundImage: `url(${images[index]})` }}
-                    ></div>
+                    ></div> */}
+
+                    {images.map((img, i) => (
+                        <div
+                            key={i}
+                            className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 zooming-background ${i === index ? 'opacity-100 scale-105 zooming-background' : 'opacity-0'} ${i === index ? 'zooming-background' : ''}`}
+                            style={{ backgroundImage: `url(${img})` }}
+                        ></div>
+                    ))}
 
                     <div className="absolute inset-0 bg-black/10 h-180"></div>
 
