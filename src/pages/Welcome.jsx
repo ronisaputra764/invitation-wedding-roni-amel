@@ -1,6 +1,7 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
 import { MdEmail } from "react-icons/md";
+import MusicPlayer from '../components/MusicPlayer';
 
 const Welcome = () => {
     const [nama, setNama] = useState('');
@@ -33,7 +34,7 @@ const Welcome = () => {
             setTimeout(() => {
                 setIndex(prev => (prev + 1) % images.length); // ganti gambar
                 setFade(true); // mulai fade in
-            }, 0); // durasi fade out
+            },); // durasi fade out
         }, 7000); // setiap 4 detik
 
         return () => clearInterval(interval);
@@ -71,6 +72,7 @@ const Welcome = () => {
             </div>
 
             {open ? <div className="relative overflow-hidden max-w-[480px] mx-auto">
+                <MusicPlayer />
                 <div className='relative overflow-hidden h-180'>
                     {/* <div
                         className={`absolute inset-0 bg-cover h-180 bg-center transition-all duration-2000 ${fade ? 'opacity-100 zooming-background' : 'opacity-100'}`}
