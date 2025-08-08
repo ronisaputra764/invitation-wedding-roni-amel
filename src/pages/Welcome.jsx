@@ -7,7 +7,12 @@ const Welcome = () => {
     const [nama, setNama] = useState('');
     const [open, setOpen] = useState(false)
     const [index, setIndex] = useState(0);
-    const [fade, setFade] = useState(true);
+    const [countdown, setCountdown] = useState({
+        days: 0,
+        hours: 0,
+        minutes: 0,
+        seconds: 0
+    });
 
     const images = [
         "/images/image1.jpg",
@@ -29,17 +34,37 @@ const Welcome = () => {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setFade(false); // mulai fade out
 
             setTimeout(() => {
                 setIndex(prev => (prev + 1) % images.length); // ganti gambar
-                setFade(true); // mulai fade in
             },); // durasi fade out
         }, 7000); // setiap 4 detik
 
         return () => clearInterval(interval);
     }, []);
 
+    useEffect(() => {
+        const targetDate = new Date("2025-10-04T07:00:00"); // Ganti dengan tanggal pernikahan kamu
+
+        const interval = setInterval(() => {
+            const now = new Date();
+            const distance = targetDate - now;
+
+            if (distance <= 0) {
+                clearInterval(interval);
+                setCountdown({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+            } else {
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+                const minutes = Math.floor((distance / (1000 * 60)) % 60);
+                const seconds = Math.floor((distance / 1000) % 60);
+
+                setCountdown({ days, hours, minutes, seconds });
+            }
+        }, 1000);
+
+        return () => clearInterval(interval);
+    }, []);
 
     return (
 
@@ -97,16 +122,16 @@ const Welcome = () => {
                             <p className='crimson-text-regular'>Samawa ya ssskhhdads</p>
                         </div>
                         <div className='absolute left-1/2 -translate-x-1/2 bottom-30'>
-                            <p className='corinthia-regular text-5xl'>Amel & Roni</p>
+                            <p className='corinthia-regular whitespace-nowrap text-6xl'>Amel & Roni</p>
                         </div>
                     </div>
                 </div>
-                <div className='bg-amber-50 h-270 relative bottom-0 py-2 w-full'>
+                <div className='bg-amber-50 h-270 relative bottom-0 py-4 w-full'>
                     <div className='border-2 h-full rounded-full border-amber-600 mx-4'>
-                        <img className='h-20 absolute left-2 top-2' src="/images/left-top.png" alt="" />
-                        <img className='h-20 absolute right-2 top-2' src="/images/right-top.png" alt="" />
-                        <img className='h-20 absolute bottom-2 left-2' src="/images/left-bottom.png" alt="" />
-                        <img className='h-20 absolute right-2 bottom-2' src="/images/right-bottom.png" alt="" />
+                        <img className='h-25 absolute left-3 top-3' src="/images/left-top.png" alt="" />
+                        <img className='h-25 absolute right-3 top-3' src="/images/right-top.png" alt="" />
+                        <img className='h-25 absolute bottom-3 left-3' src="/images/left-bottom.png" alt="" />
+                        <img className='h-25 absolute right-3 bottom-3' src="/images/right-bottom.png" alt="" />
 
                         <p className='crimson-text-regular text-amber-950 text-center mx-5 text-sm pt-10'>
                             Assalamu'alaikum <br /> Warahmatullahi Wabarakatuh <br />
@@ -139,7 +164,27 @@ const Welcome = () => {
                 <div className="w-full relative bottom-0 h-200 bg-cover bg-center bg-[url('/images/image15.jpg')]">
                     <div className="absolute inset-0 bg-black/50"></div>
                     <div className="absolute inset-0 bg-gradient-to-t from-amber-50 via-transparent to-transparent"></div>
-
+                    <p className='absolute corinthia-regular text-5xl text-amber-500 left-1/2 -translate-x-1/2 whitespace-nowrap mt-10'>Save The Date</p>
+                    <p className='absolute crimson-text-regular text-xs text-amber-50 text-center px-5 top-25'>"Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan pasangan-pasangan untukmu dari (jenis) dirimu sendiri agar kamu merasa tenteram kepadanya. Dia menjadikan di antaramu rasa cinta dan kasih sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir."</p>
+                    <p className='absolute crimson-text-regular text-sm text-amber-50 text-center px-5 top-48 left-1/2 -translate-x-1/2'>- Surah Ar-Rum Ayat 21 -</p>
+                    <div className="absolute crimson-text-regular top-90 left-1/2 -translate-x-1/2 flex gap-2 text-amber-700 text-center text-sm font-bold">
+                        <div className='bg-white/80 w-18 h-18 rounded-xl flex flex-col justify-center'>
+                            <p className="text-xl">{countdown.days}</p>
+                            <p>DAY</p>
+                        </div>
+                        <div className='bg-white/80 w-18 h-18 rounded-xl flex flex-col justify-center'>
+                            <p className="text-xl">{countdown.hours}</p>
+                            <p>HOUR</p>
+                        </div>
+                        <div className='bg-white/80 w-18 h-18 rounded-xl flex flex-col justify-center'>
+                            <p className="text-xl">{countdown.minutes}</p>
+                            <p>MINUTE</p>
+                        </div>
+                        <div className='bg-white/80 w-18 h-18 rounded-xl flex flex-col justify-center'>
+                            <p className="text-xl">{countdown.seconds}</p>
+                            <p>SECOND</p>
+                        </div>
+                    </div>
                 </div>
 
             </div> : ""}
