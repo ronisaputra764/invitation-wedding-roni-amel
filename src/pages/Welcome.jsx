@@ -125,7 +125,7 @@ const Welcome = () => {
                 </div>
             </div>
 
-            {open ? <div className="relative overflow-hidden max-w-[480px] mx-auto">
+            {open ? <div className="relative max-w-[480px] mx-auto">
                 <MusicPlayer />
                 <div className='relative overflow-hidden h-180'>
 
@@ -197,7 +197,7 @@ const Welcome = () => {
                     </div>
                 </div>
                 <div className='relative'>
-                    <div id='fixed' className="relative inset-0 bg-fixed h-screen bg-center "
+                    <div id='fixed' className="relative inset-0 bg-fixed h-screen bg-center bg-no-repeat"
                         style={{
                             backgroundImage: "url('/images/image15.jpg')",
                         }}>
