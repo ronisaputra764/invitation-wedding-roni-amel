@@ -1,7 +1,10 @@
 @import "tailwindcss";
 
 body {
-  background-color: rgb(255 251 235);
+  background-image: url(/images/image15.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 @keyframes zoomInSlow {

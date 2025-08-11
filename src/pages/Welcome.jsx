@@ -196,100 +196,94 @@ const Welcome = () => {
                         </div>
                     </div>
                 </div>
-                <div className='relative'>
-                    <div id='fixed' className="relative inset-0 bg-fixed h-screen bg-center bg-no-repeat"
-                        style={{
-                            backgroundImage: "url('/images/image15.jpg')",
-                        }}>
-                        <div className="absolute inset-0 bg-black/60"></div>
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                <div >
 
-                        <div className='z-10'>
-                            <div className="absolute crimson-text-regular top-0 text-amber-700 text-center text-sm font-bold">
-                                <div className=''>
-                                    <AnimatedSection animation='fade-in-scale'>
-                                        <p className='corinthia-regular text-5xl text-amber-500 text-center whitespace-nowrap mt-10 mb-3'>Save The Date</p>
-                                    </AnimatedSection>
-                                    <AnimatedSection animation='fade-in-up'>
-                                        <p className='crimson-text-regular text-xs text-amber-50 text-center px-5'>"Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan pasangan-pasangan untukmu dari (jenis) dirimu sendiri agar kamu merasa tenteram kepadanya. Dia menjadikan di antaramu rasa cinta dan kasih sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir."</p>
-                                        <p className='crimson-text-regular text-sm text-amber-50 text-center px-5'>- Surah Ar-Rum Ayat 21 -</p>
-                                    </AnimatedSection>
-                                </div>
-                                <AnimatedSection animation='fade-in-scale' className="flex gap-2 justify-center mt-20">
-                                    <div className='bg-white/80 w-18 h-18 rounded-xl flex flex-col justify-center'>
-                                        <p className="text-xl">{countdown.days}</p>
-                                        <p>DAY</p>
-                                    </div>
-                                    <div className='bg-white/80 w-18 h-18 rounded-xl flex flex-col justify-center'>
-                                        <p className="text-xl">{countdown.hours}</p>
-                                        <p>HOUR</p>
-                                    </div>
-                                    <div className='bg-white/80 w-18 h-18 rounded-xl flex flex-col justify-center'>
-                                        <p className="text-xl">{countdown.minutes}</p>
-                                        <p>MINUTE</p>
-                                    </div>
-                                    <div className='bg-white/80 w-18 h-18 rounded-xl flex flex-col justify-center'>
-                                        <p className="text-xl">{countdown.seconds}</p>
-                                        <p>SECOND</p>
-                                    </div>
-                                </AnimatedSection>
-                            </div>
 
-                            <div className='absolute top-120 text-center w-full border-white'>
+                    <div className='h-screen z-10 relative'>
+                        <div className="absolute crimson-text-regular top-0 text-amber-700 text-center text-sm font-bold">
+                            <div className=''>
                                 <AnimatedSection animation='fade-in-scale'>
-                                    <div>
-                                        <p className=' corinthia-regular  text-5xl text-amber-500 whitespace-nowrap'>Akad Nikah</p>
-                                        <p className='corinthia-regular text-5xl text-amber-500 whitespace-nowrap'>&</p>
-                                        <p className=' corinthia-regular  text-5xl text-amber-500 whitespace-nowrap'>Resepsi Pernikahan</p>
-                                    </div>
+                                    <p className='corinthia-regular text-5xl text-amber-500 text-center whitespace-nowrap mt-10 mb-3'>Save The Date</p>
                                 </AnimatedSection>
-                                <div className=' text-gray-200 mt-3'>
-                                    <AnimatedSection animation='fade-in-slide-right'>
-                                        <p className='crimson-text-regular text-center mb-4'>Sabtu, 4 Oktober 2025 <br /> Pukul 08:00 Sampai Pukul 14:00 WIB</p>
-                                        <p className='crimson-text-regular  text-center'> Masjid Ash Shiddiq, Cikeas Udik, <br /> Kec. Gn. Putri, Kabupaten Bogor</p>
-                                    </AnimatedSection>
-                                    <AnimatedSection animation='fade-in-slide-left'>
-                                        <a
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            href="https://www.google.com/maps/search/?api=1&query=Masjid+Ash-Shiddiq+Cikeas+Udik"
-                                            className='bg-gray-200/50 mt-4 flex gap-2 items-center justify-center py-3 rounded-md w-60 mx-auto'>
-                                            <FaLocationDot />
-                                            <p>MAP LOKASI ACARA</p>
-                                        </a>
-                                    </AnimatedSection>
-                                </div>
                                 <AnimatedSection animation='fade-in-up'>
-                                    <div className='crimson-text-regular text-center text-gray-200 text-sm mt-30'>
-                                        <p>Besar harapan kami jika Bapak/Ibu/Sahabat/Sdr/i berkenan <br /> hadir pada acara ini. Atas perhatiannya Terima kasih</p>
-                                        <p className='mt-7'>Wassalamu'alaikum Warahmatullahi Wabarakatuh</p>
-                                    </div>
+                                    <p className='crimson-text-regular text-xs text-amber-50 text-center px-5'>"Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan pasangan-pasangan untukmu dari (jenis) dirimu sendiri agar kamu merasa tenteram kepadanya. Dia menjadikan di antaramu rasa cinta dan kasih sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir."</p>
+                                    <p className='crimson-text-regular text-sm text-amber-50 text-center px-5'>- Surah Ar-Rum Ayat 21 -</p>
                                 </AnimatedSection>
                             </div>
-                            <div className='absolute top-290 '>
-                                <AnimatedSection animation='fade-in-scale'>
-                                    <p className='corinthia-regular text-center text-5xl text-amber-500 whitespace-nowrap mb-10'>Our Galery</p>
-                                </AnimatedSection>
-                                <div className='grid grid-cols-2 gap-3 mx-5'>
-                                    <AnimatedSection animation='fade-in-slide-left'>
-                                        <img className='rounded-md' src="/images/image1.jpg" alt="" />
-                                    </AnimatedSection>
-                                    <AnimatedSection animation='fade-in-slide-right'>
-                                        <img className='rounded-md' src="/images/image2.jpg" alt="" />
-                                    </AnimatedSection>
-                                    <AnimatedSection animation='fade-in-slide-left'>
-                                        <img className='rounded-md' src="/images/image3.jpg" alt="" />
-                                    </AnimatedSection>
-                                    <AnimatedSection animation='fade-in-slide-right'>
-                                        <img className='rounded-md' src="/images/image4.jpg" alt="" />
-                                    </AnimatedSection>
-                                    <AnimatedSection animation='fade-in-slide-left'>
-                                        <img className='rounded-md' src="/images/image5.jpg" alt="" />
-                                    </AnimatedSection>
-                                    <AnimatedSection animation='fade-in-slide-right'>
-                                        <img className='rounded-md' src="/images/image6.jpg" alt="" />
-                                    </AnimatedSection>
+                            <AnimatedSection animation='fade-in-scale' className="flex gap-2 justify-center mt-20">
+                                <div className='bg-white/80 w-18 h-18 rounded-xl flex flex-col justify-center'>
+                                    <p className="text-xl">{countdown.days}</p>
+                                    <p>DAY</p>
                                 </div>
+                                <div className='bg-white/80 w-18 h-18 rounded-xl flex flex-col justify-center'>
+                                    <p className="text-xl">{countdown.hours}</p>
+                                    <p>HOUR</p>
+                                </div>
+                                <div className='bg-white/80 w-18 h-18 rounded-xl flex flex-col justify-center'>
+                                    <p className="text-xl">{countdown.minutes}</p>
+                                    <p>MINUTE</p>
+                                </div>
+                                <div className='bg-white/80 w-18 h-18 rounded-xl flex flex-col justify-center'>
+                                    <p className="text-xl">{countdown.seconds}</p>
+                                    <p>SECOND</p>
+                                </div>
+                            </AnimatedSection>
+                        </div>
+
+                        <div className='absolute top-120 text-center w-full border-white'>
+                            <AnimatedSection animation='fade-in-scale'>
+                                <div>
+                                    <p className=' corinthia-regular  text-5xl text-amber-500 whitespace-nowrap'>Akad Nikah</p>
+                                    <p className='corinthia-regular text-5xl text-amber-500 whitespace-nowrap'>&</p>
+                                    <p className=' corinthia-regular  text-5xl text-amber-500 whitespace-nowrap'>Resepsi Pernikahan</p>
+                                </div>
+                            </AnimatedSection>
+                            <div className=' text-gray-200 mt-3'>
+                                <AnimatedSection animation='fade-in-slide-right'>
+                                    <p className='crimson-text-regular text-center mb-4'>Sabtu, 4 Oktober 2025 <br /> Pukul 08:00 Sampai Pukul 14:00 WIB</p>
+                                    <p className='crimson-text-regular  text-center'> Masjid Ash Shiddiq, Cikeas Udik, <br /> Kec. Gn. Putri, Kabupaten Bogor</p>
+                                </AnimatedSection>
+                                <AnimatedSection animation='fade-in-slide-left'>
+                                    <a
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        href="https://www.google.com/maps/search/?api=1&query=Masjid+Ash-Shiddiq+Cikeas+Udik"
+                                        className='bg-gray-200/50 mt-4 flex gap-2 items-center justify-center py-3 rounded-md w-60 mx-auto'>
+                                        <FaLocationDot />
+                                        <p>MAP LOKASI ACARA</p>
+                                    </a>
+                                </AnimatedSection>
+                            </div>
+                            <AnimatedSection animation='fade-in-up'>
+                                <div className='crimson-text-regular text-center text-gray-200 text-sm mt-30'>
+                                    <p>Besar harapan kami jika Bapak/Ibu/Sahabat/Sdr/i berkenan <br /> hadir pada acara ini. Atas perhatiannya Terima kasih</p>
+                                    <p className='mt-7'>Wassalamu'alaikum Warahmatullahi Wabarakatuh</p>
+                                </div>
+                            </AnimatedSection>
+                        </div>
+                        <div className='absolute top-290 '>
+                            <AnimatedSection animation='fade-in-scale'>
+                                <p className='corinthia-regular text-center text-5xl text-amber-500 whitespace-nowrap mb-10'>Our Galery</p>
+                            </AnimatedSection>
+                            <div className='grid grid-cols-2 gap-3 mx-5'>
+                                <AnimatedSection animation='fade-in-slide-left'>
+                                    <img className='rounded-md' src="/images/image1.jpg" alt="" />
+                                </AnimatedSection>
+                                <AnimatedSection animation='fade-in-slide-right'>
+                                    <img className='rounded-md' src="/images/image2.jpg" alt="" />
+                                </AnimatedSection>
+                                <AnimatedSection animation='fade-in-slide-left'>
+                                    <img className='rounded-md' src="/images/image3.jpg" alt="" />
+                                </AnimatedSection>
+                                <AnimatedSection animation='fade-in-slide-right'>
+                                    <img className='rounded-md' src="/images/image4.jpg" alt="" />
+                                </AnimatedSection>
+                                <AnimatedSection animation='fade-in-slide-left'>
+                                    <img className='rounded-md' src="/images/image5.jpg" alt="" />
+                                </AnimatedSection>
+                                <AnimatedSection animation='fade-in-slide-right'>
+                                    <img className='rounded-md' src="/images/image6.jpg" alt="" />
+                                </AnimatedSection>
                             </div>
                         </div>
                     </div>
