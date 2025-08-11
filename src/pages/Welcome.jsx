@@ -127,7 +127,7 @@ const Welcome = () => {
 
             {open ? <div className="relative max-w-[480px] mx-auto">
                 <MusicPlayer />
-                <div className='relative overflow-hidden h-180'>
+                <div className='relative overflow-hidden h-180 z-10'>
 
                     {images.map((img, i) => (
                         <div
@@ -151,7 +151,7 @@ const Welcome = () => {
                         </div>
                     </div>
                 </div>
-                <div className='bg-amber-50 h-270 relative bottom-0 py-4 w-full'>
+                <div className='bg-amber-50 h-270 relative bottom-0 py-4 w-full z-10'>
                     <div className='border-2 h-full rounded-full border-amber-600 mx-4'>
                         <img className='h-25 absolute left-3 top-3' src="/images/left-top.png" alt="" />
                         <img className='h-25 absolute right-3 top-3' src="/images/right-top.png" alt="" />
@@ -196,14 +196,17 @@ const Welcome = () => {
                         </div>
                     </div>
                 </div>
-                <div id='fixed' className="relative inset-0 bg-fixed h-screen bg-center bg-no-repeat"
-                    style={{
-                        backgroundImage: "url('/images/image15.jpg')",
-                    }}>
-                    <div className="absolute inset-0 bg-black/60"></div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                <div className='relative w-full'>
+                    <div id='fixed' className="fixed top-0 left-0 w-full h-full bg-center bg-cover z-0"
+                        style={{
+                            backgroundImage: "url('/images/image15.jpg')",
+                        }}>
+                        <div className="absolute inset-0 bg-black/60"></div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                    </div>
 
-                    <div className='z-10'>
+
+                    <div className='relative z-10'>
                         <div className="absolute crimson-text-regular top-0 text-amber-700 text-center text-sm font-bold">
                             <div className=''>
                                 <AnimatedSection animation='fade-in-scale'>
@@ -291,6 +294,7 @@ const Welcome = () => {
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div> : ""
             }
