@@ -196,19 +196,22 @@ const Welcome = () => {
                         </div>
                     </div>
                 </div>
-                <div id='fixed' className="w-full bg-fixed relative bottom-0 h-500 bg-cover bg-center bg-[url('/images/image15.jpg')]">
+                <div id='fixed' className="w-full bg-fixed relative bottom-0 h-screen pt-800 bg-cover bg-center bg-[url('/images/image15.jpg')]">
                     <div className="absolute inset-0 bg-black/60"></div>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                    <AnimatedSection animation='fade-in-scale'>
-                        <p className='absolute corinthia-regular text-5xl text-amber-500 left-1/2 -translate-x-1/2 whitespace-nowrap mt-10'>Save The Date</p>
-                    </AnimatedSection>
-                    <AnimatedSection animation='fade-in-up'>
-                        <p className='absolute crimson-text-regular text-xs text-amber-50 text-center px-5 top-25'>"Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan pasangan-pasangan untukmu dari (jenis) dirimu sendiri agar kamu merasa tenteram kepadanya. Dia menjadikan di antaramu rasa cinta dan kasih sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir."</p>
-                        <p className='absolute crimson-text-regular text-sm text-amber-50 text-center px-5 top-48 left-1/2 -translate-x-1/2'>- Surah Ar-Rum Ayat 21 -</p>
-                    </AnimatedSection>
 
-                    <div className="absolute crimson-text-regular top-70 left-1/2 -translate-x-1/2 text-amber-700 text-center text-sm font-bold">
-                        <AnimatedSection animation='fade-in-scale' className="flex gap-2">
+
+                    <div className="absolute crimson-text-regular top-0 text-amber-700 text-center text-sm font-bold">
+                        <div className=''>
+                            <AnimatedSection animation='fade-in-scale'>
+                                <p className='corinthia-regular text-5xl text-amber-500 text-center whitespace-nowrap mt-10 mb-3'>Save The Date</p>
+                            </AnimatedSection>
+                            <AnimatedSection animation='fade-in-up'>
+                                <p className='crimson-text-regular text-xs text-amber-50 text-center px-5'>"Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan pasangan-pasangan untukmu dari (jenis) dirimu sendiri agar kamu merasa tenteram kepadanya. Dia menjadikan di antaramu rasa cinta dan kasih sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir."</p>
+                                <p className='crimson-text-regular text-sm text-amber-50 text-center px-5'>- Surah Ar-Rum Ayat 21 -</p>
+                            </AnimatedSection>
+                        </div>
+                        <AnimatedSection animation='fade-in-scale' className="flex gap-2 justify-center mt-20">
                             <div className='bg-white/80 w-18 h-18 rounded-xl flex flex-col justify-center'>
                                 <p className="text-xl">{countdown.days}</p>
                                 <p>DAY</p>
@@ -228,7 +231,7 @@ const Welcome = () => {
                         </AnimatedSection>
                     </div>
 
-                    <div className='absolute bottom-260 text-center w-full border-white'>
+                    <div className='absolute top-120 text-center w-full border-white'>
                         <AnimatedSection animation='fade-in-scale'>
                             <div>
                                 <p className=' corinthia-regular  text-5xl text-amber-500 whitespace-nowrap'>Akad Nikah</p>
@@ -253,13 +256,13 @@ const Welcome = () => {
                             </AnimatedSection>
                         </div>
                         <AnimatedSection animation='fade-in-up'>
-                            <div className='crimson-text-regular text-center text-gray-200 text-sm mt-20'>
+                            <div className='crimson-text-regular text-center text-gray-200 text-sm mt-30'>
                                 <p>Besar harapan kami jika Bapak/Ibu/Sahabat/Sdr/i berkenan <br /> hadir pada acara ini. Atas perhatiannya Terima kasih</p>
                                 <p className='mt-7'>Wassalamu'alaikum Warahmatullahi Wabarakatuh</p>
                             </div>
                         </AnimatedSection>
                     </div>
-                    <div className='absolute bottom-50 '>
+                    <div className='absolute top-290 '>
                         <AnimatedSection animation='fade-in-scale'>
                             <p className='corinthia-regular text-center text-5xl text-amber-500 whitespace-nowrap mb-10'>Our Galery</p>
                         </AnimatedSection>
