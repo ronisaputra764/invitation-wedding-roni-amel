@@ -197,9 +197,10 @@ const Welcome = () => {
                     </div>
                 </div>
                 <div className='relative'>
-                    <div id='fixed' className="relative inset-0 bg-center bg-cover"
+                    <div id='fixed' className="relative inset-0 bg-fixed bottom-0 bg-center bg-no-repeat"
                         style={{
                             backgroundImage: "url('/images/image15.jpg')",
+                            backgroundAttachment: "fixed",
                         }}>
                         <div className="absolute inset-0 bg-black/60"></div>
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
