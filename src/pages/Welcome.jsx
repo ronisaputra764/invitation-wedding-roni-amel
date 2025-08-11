@@ -197,15 +197,14 @@ const Welcome = () => {
                     </div>
                 </div>
                 <div className='relative'>
-                    <div id='fixed' className="relative inset-0 bg-fixed bottom-0 bg-center bg-no-repeat"
+                    <div id='fixed' className="relative inset-0 bg-fixed h-screen bg-center "
                         style={{
                             backgroundImage: "url('/images/image15.jpg')",
-                            backgroundAttachment: "fixed",
                         }}>
                         <div className="absolute inset-0 bg-black/60"></div>
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
 
-                        <div className='h-500 z-10'>
+                        <div className='z-10'>
                             <div className="absolute crimson-text-regular top-0 text-amber-700 text-center text-sm font-bold">
                                 <div className=''>
                                     <AnimatedSection animation='fade-in-scale'>
