@@ -22,3 +22,91 @@ body {
   animation: zoomInSlow 15s ease-in-out infinite;
   will-change: transform;
 }
+
+/* Fade In Up */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px) scale(0.6);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-fade-in-up {
+  opacity: 0;
+  transform: translateY(60px) scale(0.6);
+}
+
+.animate-fade-in-up.show {
+  animation: fadeInUp 1.5s ease-out forwards;
+}
+
+/* Fade In Scale */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in-scale {
+  opacity: 0;
+  transform: scale(0.6);
+}
+
+.animate-fade-in-scale.show {
+  animation: fadeInScale 1.5s ease-out forwards;
+}
+
+/* Fade In Slide Left */
+@keyframes fadeInSlideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in-slide-left {
+  opacity: 0;
+  transform: translateX(-60px);
+}
+
+.animate-fade-in-slide-left.show {
+  animation: fadeInSlideLeft 1.5s ease-out forwards;
+}
+
+/* Fade In Slide Right */
+@keyframes fadeInSlideRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in-slide-right {
+  opacity: 0;
+  transform: translateX(60px);
+}
+
+.animate-fade-in-slide-right.show {
+  animation: fadeInSlideRight 1.5s ease-out forwards;
+}
