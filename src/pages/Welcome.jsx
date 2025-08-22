@@ -143,7 +143,8 @@ const Welcome = () => {
 
             {open ? <div className="relative max-w-[480px] mx-auto">
                 <MusicPlayer />
-                <div className='relative overflow-hidden h-180 z-20'>
+                <CommentsDisplay comments={comments} />
+                <div className='relative overflow-hidden h-180 z-10'>
 
                     {images.map((img, i) => (
                         <div
@@ -157,14 +158,13 @@ const Welcome = () => {
 
                     <div className="absolute inset-0 bg-gradient-to-t z-20 from-black via-transparent to-transparent h-180"></div>
 
-                    <div className=' text-gray-200 h-180 pt-2 relative z-60'>
-                        <CommentsDisplay comments={comments} />
+                    <div className=' text-gray-200 h-180 pt-2 relative z-20'>
                         <div className='absolute left-1/2 -translate-x-1/2 z-20 bottom-30'>
                             <p className='corinthia-regular whitespace-nowrap text-6xl'>Amel & Roni</p>
                         </div>
                     </div>
                 </div>
-                <div className='bg-amber-50 h-270 relative bottom-0 py-4 w-full z-10'>
+                <div className='bg-amber-50 h-270 relative bottom-0 py-4 w-full z-20'>
                     <div className='border-2 h-full rounded-full border-amber-600 mx-4 overflow-hidden'>
                         <img className='h-25 absolute left-3 top-3' src="/images/left-top.png" alt="" />
                         <img className='h-25 absolute right-3 top-3' src="/images/right-top.png" alt="" />
