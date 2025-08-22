@@ -274,7 +274,8 @@ const Welcome = () => {
                                     </a>
                                 </AnimatedSection>
                             </div>
-                            <AnimatedSection animation='fade-in-up'>
+
+                            <AnimatedSection animation='fade-in-scale'>
                                 <div className='crimson-text-regular text-center text-gray-200 text-sm mt-30'>
                                     <p>Besar harapan kami jika Bapak/Ibu/Sahabat/Sdr/i berkenan <br /> hadir pada acara ini. Atas perhatiannya Terima kasih</p>
                                     <p className='mt-7'>Wassalamu'alaikum Warahmatullahi Wabarakatuh</p>
