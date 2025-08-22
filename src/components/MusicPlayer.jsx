@@ -33,7 +33,7 @@ const MusicPlayer = () => {
             {/* Toggle Button */}
             <button
                 onClick={toggleAudio}
-                className="fixed bottom-5 right-5 bg-white/80 backdrop-blur-md p-3 rounded-full shadow-lg z-50"
+                className="fixed bottom-5 right-5 bg-white/80 backdrop-blur-md p-3 rounded-full shadow-lg z-100"
             >
                 {isPlaying ? (
                     <FaVolumeUp className="text-2xl text-amber-800" />

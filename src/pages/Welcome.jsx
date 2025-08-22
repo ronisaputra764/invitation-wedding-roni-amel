@@ -4,11 +4,16 @@ import { MdEmail } from "react-icons/md";
 import MusicPlayer from '../components/MusicPlayer';
 import { FaLocationDot } from "react-icons/fa6";
 import AnimatedSection from '../components/AnimatedSection';
+import Comment from '../components/Comment';
+import { collection, query, orderBy, onSnapshot } from "firebase/firestore";
+import { db } from "../../firebaseConfig";
+import CommentsDisplay from '../components/CommentDisplay';
 
 const Welcome = () => {
     const [nama, setNama] = useState('');
     const [open, setOpen] = useState(false)
     const [index, setIndex] = useState(0);
+    const [comments, setComments] = useState([]);
     const [countdown, setCountdown] = useState({
         days: 0,
         hours: 0,
@@ -22,14 +27,25 @@ const Welcome = () => {
 
 
     const images = [
-        "/images/image1.jpg",
-        "/images/image5.jpg",
-        "/images/image3.jpg",
-        "/images/image8.jpg",
-        "/images/image12.jpg",
-        "/images/image16.jpg",
-        "/images/image15.jpg",
+        "/images/MONO1424.jpg",
+        "/images/MONO1431.jpg",
+        "/images/MONO1425.jpg",
+        "/images/MONO1470.jpg",
+        "/images/MONO1475.jpg",
+        "/images/MONO1513.jpg",
+        "/images/MONO1453.jpg",
     ];
+
+    useEffect(() => {
+        const q = query(collection(db, "comments"), orderBy("createdAt", "desc"));
+        const unsubscribe = onSnapshot(q, (snapshot) => {
+            const data = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+            setComments(data);
+        });
+
+        return () => unsubscribe();
+    }, []);
+
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -100,10 +116,10 @@ const Welcome = () => {
         <div className='max-w-[480px] mx-auto relative'>
             <div className={`absolute z-90 left-0 right-0 mx-auto w-full h-screen transform transition-all duration-1000 ease-in-out ${!open ? 'translate-y-0 opacity-100' : '-translate-y-100 opacity-0 pointer-events-none'}`}>
                 {/* Background image */}
-                <div className="absolute inset-0 bg-cover bg-center bg-[url('/images/image8.jpg')]"></div>
+                <div className="absolute inset-0 bg-cover bg-center bg-[url('/images/MONO1513.jpg')]"></div>
 
                 {/* Overlay gelap */}
-                <div className="absolute inset-0 bg-black/10"></div>
+                <div className="absolute inset-0 bg-black/20"></div>
 
                 {/* Gradasi dari bawah */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
@@ -127,7 +143,7 @@ const Welcome = () => {
 
             {open ? <div className="relative max-w-[480px] mx-auto">
                 <MusicPlayer />
-                <div className='relative overflow-hidden h-180 z-10'>
+                <div className='relative overflow-hidden h-180 z-60'>
 
                     {images.map((img, i) => (
                         <div
@@ -137,15 +153,12 @@ const Welcome = () => {
                         ></div>
                     ))}
 
-                    <div className="absolute inset-0 bg-black/10 h-180"></div>
+                    <div className="absolute inset-0 bg-black/15 h-180"></div>
 
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent h-180"></div>
 
                     <div className=' text-gray-200 h-180 pt-2 relative'>
-                        <div className='bg-amber-100/90 rounded-lg z-10 text-sm px-2 py-1 left-1/2 -translate-x-1/2 w-[96%] text-yellow-800 fixed'>
-                            <p className='crimson-text-bold'>Ryan</p>
-                            <p className='crimson-text-regular'>Samawa ya ssskhhdads</p>
-                        </div>
+                        <CommentsDisplay comments={comments} />
                         <div className='absolute left-1/2 -translate-x-1/2 bottom-30'>
                             <p className='corinthia-regular whitespace-nowrap text-6xl'>Amel & Roni</p>
                         </div>
@@ -168,7 +181,7 @@ const Welcome = () => {
                         <div className='text-center'>
                             <AnimatedSection animation='fade-in-up'>
                                 <div className='w-50 h-50 inset-0 overflow-hidden rounded-full shadow-black/50 shadow-2xl mx-auto mt-10'>
-                                    <img className='' src="/images/image13.jpg" alt="" />
+                                    <img className='scale-160 -translate-y-3' src="/images/MONO1428.jpg" alt="" />
                                 </div>
                             </AnimatedSection>
                             <AnimatedSection animation='fade-in-slide-left'>
@@ -183,7 +196,7 @@ const Welcome = () => {
                         <div className='text-center mt-10'>
                             <AnimatedSection animation='fade-in-up'>
                                 <div className='w-50 h-50 inset-0 overflow-hidden rounded-full shadow-black/50 shadow-2xl mx-auto mt-10'>
-                                    <img className='' src="/images/image13.jpg" alt="" />
+                                    <img className='scale-270 -translate-y-15' src="/images/MONO1500.jpg" alt="" />
                                 </div>
                             </AnimatedSection>
                             <AnimatedSection animation='fade-in-slide-right'>
@@ -199,7 +212,7 @@ const Welcome = () => {
                 <div className='relative w-full'>
                     <div id='fixed' className="fixed top-0 left-0 w-full h-full bg-center bg-cover z-0"
                         style={{
-                            backgroundImage: "url('/images/image15.jpg')",
+                            backgroundImage: "url('/images/MONO1475.jpg')",
                         }}>
                         <div className="absolute inset-0 bg-black/60"></div>
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
@@ -274,25 +287,26 @@ const Welcome = () => {
                             </AnimatedSection>
                             <div className='grid grid-cols-2 gap-3 mx-5'>
                                 <AnimatedSection animation='fade-in-slide-left'>
-                                    <img className='rounded-md' src="/images/image1.jpg" alt="" />
+                                    <img className='rounded-md' src="/images/MONO1475.jpg" alt="" />
                                 </AnimatedSection>
                                 <AnimatedSection animation='fade-in-slide-right'>
-                                    <img className='rounded-md' src="/images/image2.jpg" alt="" />
+                                    <img className='rounded-md' src="/images/MONO1426.jpg" alt="" />
                                 </AnimatedSection>
                                 <AnimatedSection animation='fade-in-slide-left'>
-                                    <img className='rounded-md' src="/images/image3.jpg" alt="" />
+                                    <img className='rounded-md' src="/images/MONO1502.jpg" alt="" />
                                 </AnimatedSection>
                                 <AnimatedSection animation='fade-in-slide-right'>
-                                    <img className='rounded-md' src="/images/image4.jpg" alt="" />
+                                    <img className='rounded-md' src="/images/MONO1424.jpg" alt="" />
                                 </AnimatedSection>
                                 <AnimatedSection animation='fade-in-slide-left'>
-                                    <img className='rounded-md' src="/images/image5.jpg" alt="" />
+                                    <img className='rounded-md' src="/images/MONO1432.jpg" alt="" />
                                 </AnimatedSection>
                                 <AnimatedSection animation='fade-in-slide-right'>
-                                    <img className='rounded-md' src="/images/image6.jpg" alt="" />
+                                    <img className='rounded-md' src="/images/MONO1470.jpg" alt="" />
                                 </AnimatedSection>
                             </div>
                         </div>
+                        <Comment />
                     </div>
 
                 </div>
