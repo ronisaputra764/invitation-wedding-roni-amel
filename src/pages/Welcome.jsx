@@ -143,23 +143,23 @@ const Welcome = () => {
 
             {open ? <div className="relative max-w-[480px] mx-auto">
                 <MusicPlayer />
-                <div className='relative overflow-hidden h-180 z-60'>
+                <div className='relative overflow-hidden h-180 z-20'>
 
                     {images.map((img, i) => (
                         <div
                             key={i}
-                            className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 zooming-background ${i === index ? 'opacity-100 scale-105 zooming-background' : 'opacity-0'} ${i === index ? 'zooming-background' : ''}`}
+                            className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 zooming-background z-0 ${i === index ? 'opacity-100 scale-105 zooming-background' : 'opacity-0'} ${i === index ? 'zooming-background' : ''}`}
                             style={{ backgroundImage: `url(${img})` }}
                         ></div>
                     ))}
 
-                    <div className="absolute inset-0 bg-black/15 h-180"></div>
+                    <div className="absolute inset-0 bg-black/15 z-20 h-180"></div>
 
-                    <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent h-180"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t z-20 from-black via-transparent to-transparent h-180"></div>
 
-                    <div className=' text-gray-200 h-180 pt-2 relative'>
+                    <div className=' text-gray-200 h-180 pt-2 relative z-60'>
                         <CommentsDisplay comments={comments} />
-                        <div className='absolute left-1/2 -translate-x-1/2 bottom-30'>
+                        <div className='absolute left-1/2 -translate-x-1/2 z-20 bottom-30'>
                             <p className='corinthia-regular whitespace-nowrap text-6xl'>Amel & Roni</p>
                         </div>
                     </div>

@@ -14,7 +14,7 @@ export default function CommentsDisplay({ comments }) {
     }, [comments]);
 
     return (
-        <div className="fixed w-full top-5 flex justify-center overflow-hidden">
+        <div className="fixed w-full top-5 flex justify-center overflow-hidden z-50">
             <div className="w-[96%] flex justify-center">
                 <AnimatePresence mode="wait">
                     {comments.length > 0 && (
