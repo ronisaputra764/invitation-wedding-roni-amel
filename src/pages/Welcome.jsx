@@ -165,7 +165,7 @@ const Welcome = () => {
                     </div>
                 </div>
                 <div className='bg-amber-50 h-270 relative bottom-0 py-4 w-full z-10'>
-                    <div className='border-2 h-full rounded-full border-amber-600 mx-4'>
+                    <div className='border-2 h-full rounded-full border-amber-600 mx-4 overflow-hidden'>
                         <img className='h-25 absolute left-3 top-3' src="/images/left-top.png" alt="" />
                         <img className='h-25 absolute right-3 top-3' src="/images/right-top.png" alt="" />
                         <img className='h-25 absolute bottom-3 left-3' src="/images/left-bottom.png" alt="" />
@@ -250,7 +250,7 @@ const Welcome = () => {
                             </AnimatedSection>
                         </div>
 
-                        <div className='absolute top-120 text-center w-full border-white'>
+                        <div className='absolute top-120 text-center w-full border-white overflow-hidden'>
                             <AnimatedSection animation='fade-in-scale'>
                                 <div>
                                     <p className=' corinthia-regular  text-5xl text-amber-500 whitespace-nowrap'>Akad Nikah</p>
@@ -281,7 +281,7 @@ const Welcome = () => {
                                 </div>
                             </AnimatedSection>
                         </div>
-                        <div className='absolute top-290 '>
+                        <div className='absolute top-290 overflow-hidden'>
                             <AnimatedSection animation='fade-in-scale'>
                                 <p className='corinthia-regular text-center text-5xl text-amber-500 whitespace-nowrap mb-10'>Our Galery</p>
                             </AnimatedSection>
