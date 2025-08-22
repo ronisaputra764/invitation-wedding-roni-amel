@@ -181,7 +181,7 @@ const Welcome = () => {
                         <div className='text-center'>
                             <AnimatedSection animation='fade-in-up'>
                                 <div className='w-50 h-50 inset-0 overflow-hidden rounded-full shadow-black/50 shadow-2xl mx-auto mt-10'>
-                                    <img className='scale-160 -translate-y-3' src="/images/MONO1428.jpg" alt="" />
+                                    <img className='scale-160 -translate-y-3' src="/images/MONO1428.jpg" alt="" oncontextmenu="return false;" draggable="false" />
                                 </div>
                             </AnimatedSection>
                             <AnimatedSection animation='fade-in-slide-left'>
@@ -196,7 +196,7 @@ const Welcome = () => {
                         <div className='text-center mt-10'>
                             <AnimatedSection animation='fade-in-up'>
                                 <div className='w-50 h-50 inset-0 overflow-hidden rounded-full shadow-black/50 shadow-2xl mx-auto mt-10'>
-                                    <img className='scale-270 -translate-y-15' src="/images/MONO1500.jpg" alt="" />
+                                    <img className='scale-270 -translate-y-15' src="/images/MONO1500.jpg" alt="" oncontextmenu="return false;" draggable="false" />
                                 </div>
                             </AnimatedSection>
                             <AnimatedSection animation='fade-in-slide-right'>
