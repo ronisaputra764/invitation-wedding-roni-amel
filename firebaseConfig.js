@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBt4dke988KkYHuEl87y60TMo86_sn4JeM",
-    authDomain: "wedding-invitation-4ba26.firebaseapp.com",
-    projectId: "wedding-invitation-4ba26",
-    storageBucket: "wedding-invitation-4ba26.firebasestorage.app",
-    messagingSenderId: "139359073876",
-    appId: "1:139359073876:web:19e5b3a780f4da0ddd5fc1"
+    apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+    authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+    projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+    storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+    appId: import.meta.env.VITE_FIREBASE_APP_ID
 };
 
 const app = initializeApp(firebaseConfig);
