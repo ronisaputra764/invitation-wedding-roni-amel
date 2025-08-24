@@ -62,17 +62,17 @@ export default function Comment() {
     };
 
     return (
-        <div className='w-90 xl:w-[700px] absolute left-1/2 -translate-x-1/2 top-530 pb-80'>
+        <div className='w-[90%] xl:w-[700px] absolute left-1/2 -translate-x-1/2 top-530 pb-80'>
             <form
                 onSubmit={handleSubmit}
                 className="bg-gray-600/80 p-6 pb-10 rounded-2xl shadow-md flex flex-col"
             >
                 <p className='text-white poppins-semibold text-xl flex mb-4 items-center'>
-                    <span className='bg-amber-200/20 text-lg text-amber-300 py-2 px-2 rounded-xl me-2'>
+                    <span className='bg-purple-400/20 text-lg text-indigo-400 py-2 px-2 rounded-xl me-2'>
                         <FaRegComment />
                     </span>
                     Ucapan
-                    <span className='text-amber-300 ms-1'>
+                    <span className='text-indigo-400 ms-1'>
                         ({comments.length})
                     </span>
                 </p>
@@ -105,7 +105,7 @@ export default function Comment() {
                 <button
                     type="submit"
                     disabled={loading}
-                    className="bg-gradient-to-r from-amber-300 to-amber-600 text-white py-2 rounded-xl hover:opacity-90 disabled:opacity-50"
+                    className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white py-2 rounded-xl hover:opacity-90 disabled:opacity-50"
                 >
                     <span className="flex justify-center items-center gap-2">
                         <LuSend className="text-xl" />

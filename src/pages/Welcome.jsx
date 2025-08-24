@@ -8,6 +8,7 @@ import Comment from '../components/Comment';
 import { collection, query, orderBy, onSnapshot } from "firebase/firestore";
 import { db } from "../../firebaseConfig";
 import CommentsDisplay from '../components/CommentDisplay';
+import Hadiah from '../components/Hadiah';
 
 const Welcome = () => {
     const [nama, setNama] = useState('');
@@ -308,6 +309,7 @@ const Welcome = () => {
                             </div>
                         </div>
                         <Comment />
+                        <Hadiah />
                     </div>
 
                 </div>
