@@ -3,6 +3,7 @@ import { LuSend } from "react-icons/lu";
 import { useEffect, useState } from 'react';
 import { db } from "../../firebaseConfig";
 import { formatDistanceToNow } from 'date-fns';
+import AnimatedSection from "./AnimatedSection";
 
 import {
     collection,
@@ -109,7 +110,7 @@ export default function Comment() {
                 >
                     <span className="flex justify-center items-center gap-2">
                         <LuSend className="text-xl" />
-                        {loading ? 'Posting...' : 'Post Comment'}
+                        {loading ? 'Posting...' : 'Post Message'}
                     </span>
                 </button>
 

@@ -28,13 +28,13 @@ const Welcome = () => {
 
 
     const images = [
-        "/images/MONO1424.jpg",
-        "/images/MONO1431.jpg",
-        "/images/MONO1425.jpg",
-        "/images/MONO1470.jpg",
-        "/images/MONO1475.jpg",
-        "/images/MONO1513.jpg",
-        "/images/MONO1453.jpg",
+        "/images/MONO1424.avif",
+        "/images/MONO1431.avif",
+        "/images/MONO1425.avif",
+        "/images/MONO1470.avif",
+        "/images/MONO1475.avif",
+        "/images/MONO1513.avif",
+        "/images/MONO1453.avif",
     ];
 
     useEffect(() => {
@@ -117,7 +117,7 @@ const Welcome = () => {
         <div className='max-w-[480px] mx-auto relative'>
             <div className={`absolute z-90 left-0 right-0 mx-auto w-full h-screen transform transition-all duration-1000 ease-in-out ${!open ? 'translate-y-0 opacity-100' : '-translate-y-100 opacity-0 pointer-events-none'}`}>
                 {/* Background image */}
-                <div className="absolute inset-0 bg-cover bg-center bg-[url('/images/MONO1513.jpg')]"></div>
+                <div className="absolute inset-0 bg-cover bg-center bg-[url('/images/MONO1513.avif')]"></div>
 
                 {/* Overlay gelap */}
                 <div className="absolute inset-0 bg-black/20"></div>
@@ -182,7 +182,7 @@ const Welcome = () => {
                         <div className='text-center'>
                             <AnimatedSection animation='fade-in-up'>
                                 <div className='w-50 h-50 inset-0 overflow-hidden rounded-full shadow-black/50 shadow-2xl mx-auto mt-10'>
-                                    <img className='scale-160 -translate-y-3' src="/images/MONO1428.jpg" alt="" oncontextmenu="return false;" draggable="false" />
+                                    <img className='scale-160 -translate-y-3' src="/images/MONO1428.avif" alt="" oncontextmenu="return false;" draggable="false" />
                                 </div>
                             </AnimatedSection>
                             <AnimatedSection animation='fade-in-slide-left'>
@@ -197,7 +197,7 @@ const Welcome = () => {
                         <div className='text-center mt-10'>
                             <AnimatedSection animation='fade-in-up'>
                                 <div className='w-50 h-50 inset-0 overflow-hidden rounded-full shadow-black/50 shadow-2xl mx-auto mt-10'>
-                                    <img className='scale-270 -translate-y-15' src="/images/MONO1500.jpg" alt="" oncontextmenu="return false;" draggable="false" />
+                                    <img className='scale-270 -translate-y-15' src="/images/MONO1500.avif" alt="" oncontextmenu="return false;" draggable="false" />
                                 </div>
                             </AnimatedSection>
                             <AnimatedSection animation='fade-in-slide-right'>
@@ -213,7 +213,7 @@ const Welcome = () => {
                 <div className='relative w-full'>
                     <div id='fixed' className="fixed top-0 left-0 w-full h-full bg-center bg-cover z-0"
                         style={{
-                            backgroundImage: "url('/images/MONO1475.jpg')",
+                            backgroundImage: "url('/images/MONO1475.avif')",
                         }}>
                         <div className="absolute inset-0 bg-black/60"></div>
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
@@ -289,27 +289,36 @@ const Welcome = () => {
                             </AnimatedSection>
                             <div className='grid grid-cols-2 gap-3 mx-5'>
                                 <AnimatedSection animation='fade-in-slide-left'>
-                                    <img className='rounded-md' src="/images/MONO1475.jpg" alt="" />
+                                    <img className='rounded-md' src="/images/MONO1475.avif" alt="" />
                                 </AnimatedSection>
                                 <AnimatedSection animation='fade-in-slide-right'>
-                                    <img className='rounded-md' src="/images/MONO1426.jpg" alt="" />
+                                    <img className='rounded-md' src="/images/MONO1426.avif" alt="" />
                                 </AnimatedSection>
                                 <AnimatedSection animation='fade-in-slide-left'>
-                                    <img className='rounded-md' src="/images/MONO1502.jpg" alt="" />
+                                    <img className='rounded-md' src="/images/MONO1502.avif" alt="" />
                                 </AnimatedSection>
                                 <AnimatedSection animation='fade-in-slide-right'>
-                                    <img className='rounded-md' src="/images/MONO1424.jpg" alt="" />
+                                    <img className='rounded-md' src="/images/MONO1424.avif" alt="" />
                                 </AnimatedSection>
                                 <AnimatedSection animation='fade-in-slide-left'>
-                                    <img className='rounded-md' src="/images/MONO1432.jpg" alt="" />
+                                    <img className='rounded-md' src="/images/MONO1432.avif" alt="" />
                                 </AnimatedSection>
                                 <AnimatedSection animation='fade-in-slide-right'>
-                                    <img className='rounded-md' src="/images/MONO1470.jpg" alt="" />
+                                    <img className='rounded-md' src="/images/MONO1470.avif" alt="" />
                                 </AnimatedSection>
                             </div>
                         </div>
                         <Comment />
                         <Hadiah />
+                        <div className='absolute top-790 overflow-hidden px-5 pb-50 pt-15'>
+                            <AnimatedSection animation='fade-in-up'>
+                                <img className=' brightness-70 rounded-2xl' src="/images/MONO1432-footer.avif" alt="" oncontextmenu="return false;" draggable="false" />
+                                <div className='text-white/80 text-center absolute top-40'>
+                                    <p className='corinthia-regular text-4xl'>Amel & Roni</p>
+                                    <p className='crimson-text-regular text-xs'>Merupakan Suatu Kebahagiaan dan Kehormatan bagi Kami, Apabila Bapak/Ibu/Saudara/i, Berkenan Hadir di Acara kami</p>
+                                </div>
+                            </AnimatedSection>
+                        </div>
                     </div>
 
                 </div>

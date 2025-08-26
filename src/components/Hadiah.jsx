@@ -18,13 +18,13 @@ const Hadiah = () => {
                 </div>
             ) : (
 
-                <AnimatedSection animation='fade-in-scale'>
+                <AnimatedSection animation='fade-in-slide-left'>
                     <div className='flex gap-4 justify-center items-center'>
                         <div>
                             <img className='w-25' src="/images/bca-bank-central-asia 1.svg" alt="" />
                         </div>
                         <div className='text-white whitespace-nowrap poppins-semibold'>
-                            <p>RONI SAPURA</p>
+                            <p>RONI SAPUTRA</p>
                             <p>7115355201</p>
                         </div>
                     </div>
