@@ -115,7 +115,7 @@ const Welcome = () => {
     return (
 
         <div className='max-w-[480px] mx-auto relative'>
-            <div className={`absolute z-90 left-0 right-0 mx-auto w-full h-screen transform transition-all duration-1000 ease-in-out ${!open ? 'translate-y-0 opacity-100' : '-translate-y-100 opacity-0 pointer-events-none'}`}>
+            <div className={`absolute z-90 left-0 right-0 mx-auto w-full h-screen transform transition-all duration-1000 ease-in-out ${!open ? 'translate-y-0 opacity-100' : '-translate-y-200 opacity-0 pointer-events-none'}`}>
                 {/* Background image */}
                 <div className="absolute inset-0 bg-cover bg-center bg-[url('/images/MONO1513.avif')]"></div>
 
@@ -312,7 +312,7 @@ const Welcome = () => {
                         <Hadiah />
                         <div className='absolute top-790 overflow-hidden px-5 pb-50 pt-15'>
                             <AnimatedSection animation='fade-in-up'>
-                                <img className=' brightness-90 rounded-2xl' src="/images/aifaceswap-output.avif" alt="" oncontextmenu="return false;" draggable="false" />
+                                <img className=' brightness-70 rounded-2xl' src="/images/MONO1432-footer.avif" alt="" oncontextmenu="return false;" draggable="false" />
                                 <div className='text-white/80 text-center absolute top-40'>
                                     <p className='corinthia-regular text-4xl'>Amel & Roni</p>
                                     <p className='crimson-text-regular text-xs'>Merupakan Suatu Kebahagiaan dan Kehormatan bagi Kami, Apabila Bapak/Ibu/Saudara/i, Berkenan Hadir di Acara kami</p>
